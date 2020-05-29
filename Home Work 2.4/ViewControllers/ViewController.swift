@@ -18,8 +18,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func ForgotNameButton() {
-//        print("Oops!")
-//        print("Your name is User")
     }
     
     @IBAction func ForgotPasswordButton() {
