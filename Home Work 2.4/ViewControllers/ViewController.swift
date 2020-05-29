@@ -10,11 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var userNameTextFild: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func ForgotNameButton() {
+//        print("Oops!")
+//        print("Your name is User")
+    }
+    
+    @IBAction func ForgotPasswordButton() {
+    }
 }
 
