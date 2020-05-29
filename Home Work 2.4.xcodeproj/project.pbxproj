@@ -56,15 +56,55 @@
 		BB02D15924817D700046CA5E /* Home Work 2.4 */ = {
 			isa = PBXGroup;
 			children = (
-				BB02D15A24817D700046CA5E /* AppDelegate.swift */,
-				BB02D15C24817D700046CA5E /* SceneDelegate.swift */,
-				BB02D15E24817D700046CA5E /* ViewController.swift */,
-				BB02D16024817D700046CA5E /* Main.storyboard */,
-				BB02D16324817D880046CA5E /* Assets.xcassets */,
-				BB02D16524817D880046CA5E /* LaunchScreen.storyboard */,
-				BB02D16824817D880046CA5E /* Info.plist */,
+				BB02D16F248180AD0046CA5E /* ViewControllers */,
+				BB02D1722481815D0046CA5E /* Models */,
+				BB02D170248180FB0046CA5E /* Storyboards */,
+				BB02D16E24817E920046CA5E /* SupportingFiles */,
+				BB02D171248181410046CA5E /* Sources */,
 			);
 			path = "Home Work 2.4";
+			sourceTree = "<group>";
+		};
+		BB02D16E24817E920046CA5E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BB02D16824817D880046CA5E /* Info.plist */,
+				BB02D15A24817D700046CA5E /* AppDelegate.swift */,
+				BB02D15C24817D700046CA5E /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BB02D16F248180AD0046CA5E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB02D15E24817D700046CA5E /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB02D170248180FB0046CA5E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BB02D16024817D700046CA5E /* Main.storyboard */,
+				BB02D16524817D880046CA5E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BB02D171248181410046CA5E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BB02D16324817D880046CA5E /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BB02D1722481815D0046CA5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 583RUSKJ3M;
-				INFOPLIST_FILE = "Home Work 2.4/Info.plist";
+				INFOPLIST_FILE = "Home Work 2.4/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 583RUSKJ3M;
-				INFOPLIST_FILE = "Home Work 2.4/Info.plist";
+				INFOPLIST_FILE = "Home Work 2.4/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
