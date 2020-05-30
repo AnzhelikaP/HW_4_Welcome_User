@@ -18,18 +18,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+    
     @IBAction func ForgotNameButton() {
-        showAlert(with: "", and: "Oops! \n Your name is User 😉")
+        showAlert(with: "Oops!", and: "Your name is User 😉")
+        userNameTextField.text = "User"
         return
-        
     }
     
     @IBAction func ForgotPasswordButton() {
-        showAlert(with: "", and: "Oops! \n Your password is Password 😉")
+        showAlert(with: "Oops!", and: "Your password is Password 😉")
+        passwordTextField.text = "Password"
         return
-        
     }
     
+    @IBAction func LogInButton() {
+        //touchesBegan(touches, with: event)
+    }
 }
 
 
@@ -37,9 +45,7 @@ class ViewController: UIViewController {
 extension ViewController {
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.userNameTextField.text = ""
-        }
+        let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
