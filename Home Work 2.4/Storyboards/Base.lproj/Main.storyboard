@@ -72,12 +72,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="userNameTextFild" destination="8wh-t1-2Id" id="wol-si-3Ac"/>
+                        <outlet property="passwordTextField" destination="2qN-aX-s7L" id="KFQ-ZJ-Ybv"/>
+                        <outlet property="userNameTextField" destination="8wh-t1-2Id" id="eir-lz-hAF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="-134"/>
+            <point key="canvasLocation" x="283" y="-105"/>
         </scene>
     </scenes>
 </document>
