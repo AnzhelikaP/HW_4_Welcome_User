@@ -24,15 +24,16 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    
     // передача имени пользователя из текстового поля: userNameTextField
     // в переменную: userName на другой экран: WelcomeViewController
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowSegueWelcome" {
             let destinationVC: WelcomeViewController = segue.destination as! WelcomeViewController
             destinationVC.userName = userNameTextField.text!
             
         }
-    }
+    } */
     
     // Сообщение алерт контроллера
     @IBAction func ForgotNameButton() {

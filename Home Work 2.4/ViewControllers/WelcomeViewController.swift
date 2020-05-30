@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeUser.text = "Welcome, " + userName
+        welcomeUser.text = "Welcome, Anzhelika" + userName
         
         gradient()
     }
@@ -40,8 +40,8 @@ extension WelcomeViewController {
  
     // MARK: - GRADIENT на фоне
     private func gradient() {
-        let color1 = UIColor(red: 150/255, green: 26/255, blue: 243/255, alpha: 1.0).cgColor
-        let color2 = UIColor(red: 200/255, green: 26/255, blue: 151/255, alpha: 1.0).cgColor
+        let color1 = UIColor(red: 200/255, green: 26/255, blue: 100/255, alpha: 1.0).cgColor
+        let color2 = UIColor(red: 100/255, green: 26/255, blue: 200/255, alpha: 1.0).cgColor
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [color1, color2]
