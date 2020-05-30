@@ -13,6 +13,7 @@
 		BB02D16224817D700046CA5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB02D16024817D700046CA5E /* Main.storyboard */; };
 		BB02D16424817D880046CA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB02D16324817D880046CA5E /* Assets.xcassets */; };
 		BB02D16724817D880046CA5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB02D16524817D880046CA5E /* LaunchScreen.storyboard */; };
+		BB02D1742482E00F0046CA5E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02D1732482E00F0046CA5E /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BB02D16324817D880046CA5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB02D16624817D880046CA5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB02D16824817D880046CA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB02D1732482E00F0046CA5E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				BB02D15E24817D700046CA5E /* ViewController.swift */,
+				BB02D1732482E00F0046CA5E /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB02D15F24817D700046CA5E /* ViewController.swift in Sources */,
+				BB02D1742482E00F0046CA5E /* WelcomeViewController.swift in Sources */,
 				BB02D15B24817D700046CA5E /* AppDelegate.swift in Sources */,
 				BB02D15D24817D700046CA5E /* SceneDelegate.swift in Sources */,
 			);
