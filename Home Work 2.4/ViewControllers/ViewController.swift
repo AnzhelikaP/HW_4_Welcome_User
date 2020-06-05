@@ -8,62 +8,53 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
-    // скрытие клавиатуры
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        self.view.endEditing(true)
-    }
-    
-    
-    // передача имени пользователя из текстового поля: userNameTextField
-    // в переменную: userName на другой экран: WelcomeViewController
- /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowSegueWelcome" {
-            let destinationVC: WelcomeViewController = segue.destination as! WelcomeViewController
-            destinationVC.userName = userNameTextField.text!
-            
-        }
-    } */
-    
-    // Сообщение алерт контроллера
+    // Сообщение алерт контроллера по-поводу ввода имени пользователя
     @IBAction func ForgotNameButton() {
-        showAlert(with: "Oops!", and: "Your name is Anzhelika 😉")
-        userNameTextField.text = "Anzhelika"
+        
+        showAlert(with: "Oops!", and: "Your name is \(user.login) 😉")
+        userNameTextField.text = user.login
         return
     }
     
+    // Сообщение алерт контроллера по-поводу ввода пароля
     @IBAction func ForgotPasswordButton() {
-        showAlert(with: "Oops!", and: "Your password is Password 😉")
-        passwordTextField.text = "Password"
+        showAlert(with: "Oops!", and: "Your password is \(user.password) 😉")
+        passwordTextField.text = user.password
         return
     }
     
     @IBAction func LogInButton() {
-        //touchesBegan(touches, with: event)
-        //  userNameTextField.text = " "
-        passwordTextField.text = " "
-        
+        if userNameTextField.text != user.login && passwordTextField.text == user.password {
+            showAlert(with: "Oops!", and: "Login is not correct! 🤔")
+        } else if userNameTextField.text == user.login && passwordTextField.text != user.password {
+            showAlert(with: "Oops!", and: "Password is not correct! 🤔")
+        } else if userNameTextField.text != user.login && passwordTextField.text != user.password {
+            showAlert(with: "Oops!", and: "Login and password are not correct! 🤔")
+        }
+        passwordTextField.text = ""
     }
     
-    
-    
+    // Возврат на предыдущий экран по кнопке Log Out
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
 }
-
-
 
 extension ViewController { // расширение для ViewController
     
-  // MARK: - UIAlertController
+    // MARK:  01 - UIAlertController
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
@@ -71,6 +62,25 @@ extension ViewController { // расширение для ViewController
         present(alert, animated: true)
     }
     
-
-
+    /* MARK: 02 передача имени пользователя из текстового поля: userNameTextField
+     в переменную: userName на другой экран: WelcomeViewController через TabBarController */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarController = segue.destination as! UITabBarController
+        let destinationVC = tabBarController.viewControllers?.first as!
+        WelcomeViewController
+        destinationVC.userName = userNameTextField.text!
+    }
+    
+    // MARK: 03 скрытие клавиатуры при тапе по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+    
+    // MARK: 04 скрытие клавиатуры после набора пароля
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
+        return true
+    }
 }

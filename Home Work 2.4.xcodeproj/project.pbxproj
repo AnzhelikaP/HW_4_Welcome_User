@@ -14,7 +14,8 @@
 		BB02D16424817D880046CA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB02D16324817D880046CA5E /* Assets.xcassets */; };
 		BB02D16724817D880046CA5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB02D16524817D880046CA5E /* LaunchScreen.storyboard */; };
 		BB02D1742482E00F0046CA5E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02D1732482E00F0046CA5E /* WelcomeViewController.swift */; };
-		BBBB0335248318F4001EB807 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB0334248318F4001EB807 /* TabBarViewController.swift */; };
+		BBAC5A8B2483F97F00D2F55C /* InformationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAC5A8A2483F97F00D2F55C /* InformationUser.swift */; };
+		BBBB0337248320FC001EB807 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB0336248320FC001EB807 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		BB02D16624817D880046CA5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB02D16824817D880046CA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB02D1732482E00F0046CA5E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		BBBB0334248318F4001EB807 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		BBAC5A8A2483F97F00D2F55C /* InformationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationUser.swift; sourceTree = "<group>"; };
+		BBBB0336248320FC001EB807 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../Storyboards/TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,8 @@
 		BB02D16F248180AD0046CA5E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BBBB0336248320FC001EB807 /* TabBarViewController.swift */,
 				BB02D15E24817D700046CA5E /* ViewController.swift */,
-				BBBB0334248318F4001EB807 /* TabBarViewController.swift */,
 				BB02D1732482E00F0046CA5E /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
@@ -109,6 +111,7 @@
 		BB02D1722481815D0046CA5E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BBAC5A8A2483F97F00D2F55C /* InformationUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,7 +190,8 @@
 				BB02D15F24817D700046CA5E /* ViewController.swift in Sources */,
 				BB02D1742482E00F0046CA5E /* WelcomeViewController.swift in Sources */,
 				BB02D15B24817D700046CA5E /* AppDelegate.swift in Sources */,
-				BBBB0335248318F4001EB807 /* TabBarViewController.swift in Sources */,
+				BBAC5A8B2483F97F00D2F55C /* InformationUser.swift in Sources */,
+				BBBB0337248320FC001EB807 /* TabBarViewController.swift in Sources */,
 				BB02D15D24817D700046CA5E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

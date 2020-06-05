@@ -23,13 +23,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="2qN-aX-s7L">
                                         <rect key="frame" x="0.0" y="47" width="288" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="LogInButton" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Vf5-jK-25P"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="odK-na-z63"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHU-f9-Rua">
                                         <rect key="frame" x="0.0" y="94" width="288" height="36"/>
@@ -84,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-906" y="-133"/>
+            <point key="canvasLocation" x="-2136" y="-319"/>
         </scene>
         <!--ViewControllerWelcomeUser-->
         <scene sceneID="XX3-1l-QdT">
@@ -120,6 +124,9 @@
                                         <state key="normal" title="Log out">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="dxE-Pq-LdC" kind="unwind" unwindAction="unwindSegueWithSegue:" id="knA-Hb-YsO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -139,8 +146,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtX-dQ-eCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="dxE-Pq-LdC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-928" y="656"/>
+            <point key="canvasLocation" x="-2156" y="470"/>
         </scene>
         <!--Region-->
         <scene sceneID="D6G-1J-OPh">
@@ -149,14 +157,36 @@
                     <view key="view" contentMode="scaleToFill" id="wea-x6-ScR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BCN-1" translatesAutoresizingMaskIntoConstraints="NO" id="63Y-C1-CIi">
+                                <rect key="frame" x="31" y="16" width="258" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="63Y-C1-CIi" secondAttribute="height" multiplier="1:1" id="R6h-12-zIN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Это Барселона - город, в котором я живу 5 лет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoo-pn-YA0">
+                                <rect key="frame" x="16" y="324" width="288" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.13733431965643494" green="0.20387852579684274" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.95755639790889502" blue="0.79402031305539877" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eoo-pn-YA0" firstAttribute="leading" secondItem="hdH-UZ-Uyu" secondAttribute="leading" constant="16" id="4hg-wA-ATz"/>
+                            <constraint firstItem="hdH-UZ-Uyu" firstAttribute="trailing" secondItem="eoo-pn-YA0" secondAttribute="trailing" constant="16" id="CUt-MY-NAy"/>
+                            <constraint firstItem="63Y-C1-CIi" firstAttribute="centerX" secondItem="wea-x6-ScR" secondAttribute="centerX" id="bxK-WN-9Pu"/>
+                            <constraint firstItem="63Y-C1-CIi" firstAttribute="width" secondItem="hdH-UZ-Uyu" secondAttribute="height" multiplier="382:769" id="mCX-lQ-WVJ"/>
+                            <constraint firstItem="eoo-pn-YA0" firstAttribute="top" secondItem="63Y-C1-CIi" secondAttribute="bottom" constant="50" id="ow8-2e-0KX"/>
+                            <constraint firstItem="63Y-C1-CIi" firstAttribute="top" secondItem="hdH-UZ-Uyu" secondAttribute="top" constant="16" id="zEP-3J-r7m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hdH-UZ-Uyu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Region" image="globe" catalog="system" id="fNw-Lj-LcG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIw-aN-Hm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="656"/>
+            <point key="canvasLocation" x="-1102.8985507246377" y="468.75"/>
         </scene>
         <!--Family-->
         <scene sceneID="ABL-H0-vQu">
@@ -165,14 +195,37 @@
                     <view key="view" contentMode="scaleToFill" id="D0A-hv-TJ4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.88127575390928392" green="0.8659081252349885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat-1" translatesAutoresizingMaskIntoConstraints="NO" id="37I-Lz-WHY">
+                                <rect key="frame" x="31" y="16" width="258" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="37I-Lz-WHY" secondAttribute="height" multiplier="1:1" id="Tcb-pe-fhe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cибирский котик Сильвер - полноценный член нашей семьи" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-AY-a2V">
+                                <rect key="frame" x="16" y="324" width="288" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.49423152380818075" green="0.24377025976456107" blue="0.81976602979274615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90733507241678346" green="1" blue="0.97066273744449583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="37I-Lz-WHY" firstAttribute="top" secondItem="b9F-kh-a6o" secondAttribute="top" constant="16" id="134-lU-yxb"/>
+                            <constraint firstItem="37I-Lz-WHY" firstAttribute="centerX" secondItem="D0A-hv-TJ4" secondAttribute="centerX" id="4jC-iu-xmR"/>
+                            <constraint firstItem="b9F-kh-a6o" firstAttribute="trailing" secondItem="qaY-AY-a2V" secondAttribute="trailing" constant="16" id="a55-8c-t5J"/>
+                            <constraint firstItem="qaY-AY-a2V" firstAttribute="leading" secondItem="b9F-kh-a6o" secondAttribute="leading" constant="16" id="fxh-GD-UCU"/>
+                            <constraint firstItem="qaY-AY-a2V" firstAttribute="top" secondItem="37I-Lz-WHY" secondAttribute="bottom" constant="50" id="xBE-Ba-aqG"/>
+                            <constraint firstItem="37I-Lz-WHY" firstAttribute="width" secondItem="b9F-kh-a6o" secondAttribute="height" multiplier="382:769" id="yhb-LY-Syo"/>
+                            <constraint firstItem="37I-Lz-WHY" firstAttribute="width" secondItem="b9F-kh-a6o" secondAttribute="height" multiplier="382:769" id="ymf-81-FWP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="b9F-kh-a6o"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Family" image="hare" catalog="system" id="fsi-53-vqk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x15-2L-f4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="656"/>
+            <point key="canvasLocation" x="-214.49275362318843" y="468.75"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="itI-vp-a9G">
@@ -180,6 +233,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7L9-Dc-c7n" customClass="TabBarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pb4-e6-oVx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -191,10 +245,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpd-Gj-V89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="-133"/>
+            <point key="canvasLocation" x="-1101" y="-319"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BCN-1" width="2048" height="2048"/>
+        <image name="Cat-1" width="2048" height="2048"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="hare" catalog="system" width="128" height="92"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
